@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main (int argc, char * argv []) {
+	
+	float vAltura, vLargura, vSoma;
+	
+	printf ("Digite a Altura do retangulo:"); scanf ("% f", & vAltura);
+	printf ("Digite a Largura do retangulo:"); scanf ("% f", & vLargura);
+	vSoma = vAltura * vLargura;
+	
+	printf ("\ nRESULTADO:% .1f", vSoma);
+	
+	return 0;
+}
