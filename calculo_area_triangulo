@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+	
+	int vBase, vAltura, vSoma;
+	
+	printf("Digite a base do triangulo: "); scanf("%i", &vBase);
+	printf("Digite a altura do triangulo: "); scanf("%i", &vAltura);
+	
+	vSoma = (vBase * vAltura) / 2;
+	
+	printf("\nRESULTADO = %i", vSoma);
+	
+	return 0;
+}
