@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+	
+	float salario, soma, grat5, impost7; //grat5 = gratificação em 5%, impost7 = imposto em 7%
+	
+	printf("Digite o salario base do funcionario: "); scanf("%f", &salario);
+	grat5 = salario * 5 / 100 ;
+	impost7 = salario * 7 / 100 ;
+	soma = salario - impost7 + grat5 ;
+	
+	printf("\nSalario = %.2f", soma);
+	printf("\nGratificacao = %.2f", grat5);
+	printf("\nImposto = %.2f", impost7);
+	
+	return 0;
+}
