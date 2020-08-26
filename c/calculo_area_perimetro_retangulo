@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+	
+	int vAltura, vLargura, vPerimetro, vArea;
+	
+	printf("Digite o valor da Altura: ");
+	scanf("%i", &vAltura);
+	printf("Digite o valor da Largura: ");
+	scanf("%i", &vLargura);
+	
+	vPerimetro = 2*vAltura + 2*vLargura;
+	vArea = vAltura * vLargura; 
+
+	printf("\nPerimetro: %i\nArea: %i", vPerimetro, vArea);
+
+	return 0;
+}
