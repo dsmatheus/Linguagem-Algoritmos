@@ -3,7 +3,7 @@
 
 int main() {
 	
-	float salario, imposto, aumento;
+	float salario, imposto;
 	int menu;
 	
 	printf("Menu de opcoes:");
