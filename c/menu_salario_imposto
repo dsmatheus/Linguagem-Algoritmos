@@ -6,62 +6,65 @@ int main() {
 	float salario, imposto;
 	int menu;
 	
-	printf("Menu de opcoes:");
+	printf("Digite uma das opcoes do menu: \n");
+	printf("1 - Imposto\n2 - Novo salario\n3 - Classificacao\n");
 	scanf("%i", &menu);
 	
 	
 	if (menu == 1){
-	   printf("Digite seu salario: ");
-   	   scanf("%f", &salario);	
+		printf("Digite seu salario: ");
+		scanf("%f", &salario);	
 		
-	   if (salario < 1500.00){
-  	      imposto = (salario * 5/100);
-	      printf("%f", salario + imposto);
-	   }
-	   else
-	      if(salario == 1500.00 || salario <= 2500.00){
-	         imposto = (salario * 7.5/100);
-		 printf("%f", salario + imposto);
-	      }
-	      else{
-	         imposto = (salario * 10/100);
-	         printf("%f", salario + imposto);
-	      }
-	 }
-
-	 if (menu == 2){
-	    printf("Digite seu salario: ");
-	    scanf("%f", &salario);	
-		
-	    if (salario > 2500.00){
-	        salario = salario + 250.00;
-		printf("%f", salario);
+		if (salario < 1500.00){
+		   imposto = (salario * 5/100);
+		   printf("Salario atualizado (imposto) = %.2f", salario - imposto);
 	    }
-	    else 
-	       if (salario == 2000.01 || salario <= 2500.00){
-  		   salario = salario + 300.00;
-		   printf("%f", salario);
-	       }
-	       else 
-		  if (salario == 1500.00 || salario <= 2000.00){
-		      salario = salario + 350.00;
-		  }
-		  else{
-		     salario = salario + 400.00;
-		  }
-	 }
-	
-	 if (menu == 3){
-	    printf("Digite seu salario: ");
-	    scanf("%f", &salario);
+	    else
+	       if(salario == 1500.00 || salario <= 2500.00){
+		      imposto = (salario * 7.5/100);
+		      printf("Salario atualizado (imposto) = %.2f", salario - imposto);
+	        }
+	        else{
+	        	imposto = (salario * 10/100);
+	        	printf("Salario atualizado (imposto) = %.2f", salario - imposto);
+		    }
+	}
+
+	if (menu == 2){
+		printf("Digite seu salario: ");
+		scanf("%f", &salario);	
 		
-	       if (salario < 2000.00){
-	      	  printf("Remuneracao precisa ser reavaliada.");
-	       }
-	       else{
-		  printf("Boa remuneracao.");	
-	       }
-	 }
+		if (salario >= 2500.01){
+			salario = salario + 250.00;
+			printf("Salario atualizado (aumento) = %.2f", salario);
+		}
+		else 
+			if(salario >= 2000.01 && salario <= 2500.00){
+				salario = salario + 300.00;
+				printf("Salario atualizado (aumento) = %.2f", salario);
+			}
+			else 
+				if (salario >= 1500.00 && salario <= 2000.00){
+					salario = salario + 350.00;
+					printf("Salario atualizado (aumento) = %.2f", salario);
+				}
+				else{
+					salario = salario + 400.00;
+					printf("Salario atualizado (aumento) = %.2f", salario);
+				}
+	}
+	
+	if (menu == 3){
+		printf("Digite seu salario: ");
+		scanf("%f", &salario);
+		
+		if (salario < 2000.00){
+			printf("Remuneracao precisa ser reavaliada.");
+		}
+		else{
+			printf("Boa remuneracao.");	
+		}
+	}
 	
 	
 	return 0;
