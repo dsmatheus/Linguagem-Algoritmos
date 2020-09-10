@@ -1,0 +1,68 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+	
+	float salario, imposto, aumento;
+	int menu;
+	
+	printf("Menu de opcoes:");
+	scanf("%i", &menu);
+	
+	
+	if (menu == 1){
+		printf("Digite seu salario: ");
+		scanf("%f", &salario);	
+		
+		if (salario < 1500.00){
+		   imposto = (salario * 5/100);
+		   printf("%f", salario + imposto);
+	    }
+	    else
+	       if(salario == 1500.00 || salario <= 2500.00){
+		      imposto = (salario * 7.5/100);
+		      printf("%f", salario + imposto);
+	        }
+	        else{
+	        	imposto = (salario * 10/100);
+	        	printf("%f", salario + imposto);
+		    }
+	}
+
+	if (menu == 2){
+		printf("Digite seu salario: ");
+		scanf("%f", &salario);	
+		
+		if (salario > 2500.00){
+			salario = salario + 250.00;
+			printf("%f", salario);
+		}
+		else 
+			if(salario == 2000.01 || salario <= 2500.00){
+				salario = salario + 300.00;
+				printf("%f", salario);
+			}
+			else 
+				if (salario == 1500.00 || salario <= 2000.00){
+					salario = salario + 350.00;
+				}
+				else{
+					salario = salario + 400.00;
+				}
+	}
+	
+	if (menu == 3){
+		printf("Digite seu salario: ");
+		scanf("%f", &salario);
+		
+		if (salario < 2000.00){
+			printf("Remuneracao precisa ser reavaliada.");
+		}
+		else{
+			printf("Boa remuneracao.");	
+		}
+	}
+	
+	
+	return 0;
+}
