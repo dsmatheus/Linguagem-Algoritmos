@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(){
+
+    int idade, soma, cont;
+    float media;
+
+    cont = 0; //variavel contador
+    soma = 0; //variavel soma da idade
+    printf("Programa para calculo da Media das idades\n");
+    printf("Digite uma idade: ");
+    scanf("%i", &idade);
+
+    while (idade < 100)
+    {   
+        printf("Digite uma idade: ");   //printf primeiro dentro do while para nao ficar com o ms-dos sem escrita
+        soma = soma + idade ;           //soma em seguida para somar a idade que esta fora do while
+        cont++ ;                        //cont++ é necessário para contar as repetições 
+        scanf("%i", &idade);            //scanf por ultimo para registar o valor da var idade que esta dentro do while
+    }
+    
+    media = soma / cont ;               //calculo da media é sempre fora das estruturas (while, for)
+    printf("MEDIA = %.2f", media);      //Imprimir na tela o resultado
+
+}
