@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(){
+
+    int i, idade;
+    double smedia, soma ;
+
+    printf("Calculo da media das idades\n");
+
+    for (i = 0; i < 5; i++)
+    {
+        printf("Digite a idade: ");
+        scanf("%i", &idade);
+        smedia = smedia + idade;
+    }
+
+    soma = smedia / i; 
+    printf("SOMA = %.2lf", soma);
+
+}
