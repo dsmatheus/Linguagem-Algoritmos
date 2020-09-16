@@ -1,0 +1,37 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(){
+
+    int vValor, soma, cont;
+
+    soma = 0;
+    cont = 0;
+    printf("Programa para calculo de numero par e impar\n");
+    printf("Digite um numero: ");
+    scanf("%i", &vValor);
+
+    while (vValor != 0)
+    {
+        printf("Digite outro valor: ");
+        if(vValor % 2 == 0)
+        {
+            //printf("Digite outro numero: ");
+            soma = soma + vValor;
+            //scanf("%i", &vValor);
+            cont++;
+        }
+        else
+        {
+            //printf("Digite outro numero: ");
+            soma = soma - vValor;
+            //scanf("%i", &vValor);
+            cont++;
+        }
+        scanf("%i", &vValor);
+    }
+    
+    printf("VALOR = %i", soma);
+
+
+}
