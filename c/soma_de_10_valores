@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(){
+
+    int x, i, vSoma;
+
+    vSoma = 0 ;
+    printf("Programa para calculo de 10 numeros inteiros\n");
+
+    for(i=0; i<10; i++){
+        printf("Digite um Numero: ");
+        scanf("%i", &x);
+        vSoma = vSoma + x ;
+    }
+
+    printf("SOMA = %i \n", vSoma);
+
+}
