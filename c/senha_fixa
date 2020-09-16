@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(){
+
+    int senha;
+
+    printf("Programa de senha de seguranca\n");
+    printf("Dica: 4571\n");
+    printf("Digite sua senha de 4 digitos: ");
+    scanf("%i", &senha);
+
+    while (senha != 4571)
+    {
+        printf("Senha invalida! Digite a senha novamente: ");
+        scanf("%i", &senha);
+    }
+    
+    printf("Acesso permitido!");
+
+}
