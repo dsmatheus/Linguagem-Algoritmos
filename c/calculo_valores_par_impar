@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(){
+
+    int i, x, soma;
+
+    soma = 0 ;
+    printf("Programa para soma dos pares e subtracao do impares de 10 valores\n");
+
+    for (i = 0; i < 10; i++)
+    {
+        printf("Digite um numero: ");
+        scanf("%i", &x);
+        if(x%2 == 0){
+            soma = soma + x;
+        }
+        else
+        {
+            soma = soma - x;
+        }
+        
+    }
+    
+    printf("SOMA = %i", soma);
+
+}
