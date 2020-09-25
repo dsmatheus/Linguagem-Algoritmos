@@ -1,0 +1,86 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(){
+
+    int menu;
+    double kilos, vTotal, vSoma;
+
+    printf("\nPrograma valor KILOS\n");
+    printf("    MENU\n");
+
+    menu = 1;
+    while (menu >= 1 && menu <= 4)
+    {
+        printf("\n 1- Tomate\n 2- Cenoura\n 3- Beterraba\n 4- Pepino\n");
+        printf("Digite o Codigo do produto: ");
+        scanf("%i", &menu);
+
+        if (menu == 1)
+        {
+            printf("Digite o Kg: ");
+            scanf("%lf", &kilos);
+
+            if (kilos < 3)
+            {
+                vTotal = kilos * 4.50 ;
+            }
+            else
+            {
+                vTotal = kilos * 4.20 ;
+            }
+            vSoma = vSoma + vTotal ;
+        }
+        else
+            if (menu == 2)
+            {
+                printf("Digite o Kg: ");
+                scanf("%lf", &kilos);
+
+                if (kilos < 3)
+                {
+                    vTotal = kilos * 3.90 ;
+                }
+                else
+                {
+                    vTotal = kilos * 3.50 ;
+                }
+                vSoma = vSoma + vTotal ;
+                
+            }
+            else
+                if (menu == 3)
+                {
+                    printf("Digite o Kg: ");
+                    scanf("%lf", &kilos);
+
+                    if (kilos < 3)
+                    {
+                        vTotal = kilos * 4.80 ;
+                    }
+                    else
+                    {
+                        vTotal = kilos * 4.40 ;
+                    }
+                    vSoma = vSoma + vTotal ;
+                }
+                else
+                    if (menu == 4)
+                    {
+                        printf("Digite o Kg: ");
+                        scanf("%lf", &kilos);
+
+                        if (kilos < 3)
+                        {
+                            vTotal = kilos * 2.75 ;
+                        }
+                        else
+                        {
+                            vTotal = kilos * 2.60 ;
+                        }
+                        vSoma = vSoma + vTotal ;
+                    } 
+
+        printf("SOMA = R$%.2lf", vSoma);            
+    }
+}
