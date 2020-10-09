@@ -1,15 +1,12 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include<locale.h>
 
 int main(){
-    setlocale(LC_ALL, "Portuguese");
 
     double item[20][5];
     int menu, i, j, qtde;
     char opcao[2];
     
-
     printf("\nMENU DE CADASTROS E VENDAS DE PRODUTOS\n");
 
     do{
@@ -52,4 +49,13 @@ int main(){
             }
         }  
     }while(menu != 0);
+    
+    /*
+    for (i = 0; i < qtde; i++)
+    {
+        for (j = 0; j < 5; j++)
+        {
+            printf("\tTESTE = posicao da linha %lf e da coluna %lf \n", item[i][j]);
+        }
+    }*/
 }
