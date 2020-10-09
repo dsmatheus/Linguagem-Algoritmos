@@ -1,0 +1,55 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<locale.h>
+
+int main(){
+    setlocale(LC_ALL, "Portuguese");
+
+    double item[20][5];
+    int menu, i, j, qtde;
+    char opcao[2];
+    
+
+    printf("\nMENU DE CADASTROS E VENDAS DE PRODUTOS\n");
+
+    do{
+        printf("\nDIGITE O CODIGO DO MENU:\n1-CADASTRAR PRODUTO\n2-VENDER PRODUTO\n0-SAIR\nOpcao: ");
+        scanf("%i", &menu);
+
+        if (menu == 1)
+        { 
+            printf("\nDigite a quantidade de produtos que vai cadastrar:\n");
+            scanf("%i", &qtde);
+
+            for (i = 0; i < qtde; i++)
+            {
+                for (j = 0; j < 5; j++)
+                {
+                    if (j == 0)
+                    {
+                        printf("\nCODIGO DO PRODUTO: ");
+                        scanf("%lf", &item[i][j]);
+                    }
+                    else
+                        if (j == 1)
+                        {
+                            printf("VALOR DE CUSTO: ");
+                            scanf("%lf", &item[i][j]);
+                        }
+                        else
+                            if (j == 2)
+                            {
+                                printf("MARGEM DE LUCRO: ");
+                                scanf("%lf", &item[i][j]);
+                            }
+                            else
+                                if(j == 4)
+                                {
+                                    printf("SALDO EM ESTOQUE: ");
+                                    scanf("%lf", &item[i][j]);
+                                }
+                }
+            }
+        }  
+    }while(menu != 0);
+}
